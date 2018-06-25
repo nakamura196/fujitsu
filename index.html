@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Timeline | Item class names</title>
+
+	<link
+	href="http://cdnjs.cloudflare.com/ajax/libs/vis/4.15.1/vis.min.css"
+	rel="stylesheet" type="text/css" />
+
+
+	<link rel="stylesheet"
+	href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+
+	<!-- Magnific Popup core CSS file -->
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<style type="text/css">
+body, input {
+	font: verdana;
+}
+
+.white-popup {
+	position: relative;
+	background: #FFF;
+	padding: 50px;
+	width: auto;
+	max-width: 80%;
+	margin: 50px auto;
+}
+
+#mynetwork {
+	width: 100%;
+	height: 400px;
+	border: 1px solid lightgray;
+}
+
+/* custom styles for individual items, load this after vis.css */
+.vis-item.green {
+	border-color: green;
+	background-color: white;
+	color: black;
+}
+
+/* create a custom sized dot at the bottom of the red item */
+.vis-item.red {
+	border-color: red;
+	background-color: white;
+	color: black;
+}
+
+.vis-item.yellow {
+	border-color: gold;
+	background-color: white;
+	color: black;
+}
+
+.vis-item.blue {
+	border-color: blue;
+	background-color: white;
+	color: black;
+}
+
+.vis-item.black {
+	border-color: black;
+	background-color: white;
+	color: black;
+}
+
+.vis-item.purple {
+	border-color: purple;
+	background-color: white;
+	color: black;
+}
+
+.vis-item.blue2 {
+	border-color: aqua;
+	background-color: white;
+	color: black;
+}
+
+.vis-item.blue3 {
+	border-color: magenta;
+	background-color: white;
+	color: black;
+}
+
+.vis-item.vis-selected {
+	/* custom colors for selected orange items */
+	background-color: orange;
+}
+
+tfoot input {
+	width: 100%;
+	padding: 3px;
+	box-sizing: border-box;
+}
+</style>
+
+
+
+
+<body>
+
+	<!-- Header -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+				class="icon-bar"></span> <span class="icon-bar"></span> <span
+				class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">セマンティック技術適用プログラム - 研究の系譜</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+		id="bs-example-navbar-collapse-1">
+	</div>
+</div>
+</nav>
+
+<div class="container-fluid">
+	<ul class="nav nav-tabs nav-justified" id="resourceNarrowTabs">
+		<li class="active"><a href="#timeline" data-toggle="tab">Timeline</a></li>
+		<li><a href="#timetable" data-toggle="tab">Timetable</a></li>
+		<li><a href="#statistics" onclick="statistics()"
+			data-toggle="tab">Statistics</a></li>
+		</ul>
+
+		<div id="resourceNarrowContents" class="tab-content">
+
+			<br> <br>
+
+			<div class="tab-pane in active" id="timeline">
+
+
+
+				<div class="panel panel-default">
+					<div class="panel-heading">絞込み</div>
+					<div class="panel-body">
+
+						<div class="form-horizontal">
+							<div class="form-group">
+								<label class="col-sm-2 control-label">段階</label>
+								<div class="col-sm-10">
+									<label class="checkbox-inline"> <input type="checkbox"
+										id="inlineCheckbox" value="仮説設定" checked> 仮説設定
+									</label> <label class="checkbox-inline"> <input type="checkbox"
+										id="inlineCheckbox" value="開発・仮説検証" checked> 開発・仮説検証
+									</label> <label class="checkbox-inline"> <input type="checkbox"
+										id="inlineCheckbox" value="実証" checked> 実証
+									</label> <label class="checkbox-inline"> <input type="checkbox"
+										id="inlineCheckbox" value="実用化" checked> 実用化
+									</label>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="button" id="search" class="btn btn-default">検索</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="mytimeline"></div>
+
+			</div>
+
+			<div class="tab-pane" id="timetable">
+				<table id="table_main" class="table table-striped display"
+				cellspacing="0" style="width: 100%">
+				<thead>
+					<tr>
+						<th>タイトル</th>
+						<th>著者</th>
+						<th>学会名</th>
+						<th>発表/公開日</th>
+						<th>段階</th>
+						<th>詳細</th>
+					</tr>
+				</thead>
+				<tbody id="tbody_main"></tbody>
+				<tfoot>
+					<tr>
+						<th>タイトル</th>
+						<th>著者</th>
+						<th>学会名</th>
+						<th>発表/公開日</th>
+						<th>段階</th>
+						<th>詳細</th>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+
+		<div class="tab-pane" id="statistics"></div>
+	</div>
+
+	<div id="test-popup" class="white-popup mfp-hide">
+
+		<div class="panel panel-default">
+			<div class="panel-heading">Metadata</div>
+			<div class="panel-body">
+				<table class="table" style="word-break: break-all;">
+					<thead>
+						<tr>
+							<th style="width: 30%">Field</th>
+							<th>Value</th>
+						</tr>
+					</thead>
+					<tbody id="tbody"></tbody>
+				</table>
+
+			</div>
+		</div>
+
+		<div class="panel panel-default" id="network">
+			<div class="panel-heading">論文間の関係性</div>
+			<div class="panel-body">
+				<div id="mynetwork"></div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<hr>
+
+<footer class="footer">
+	<div class="container" style="text-align: center">
+		<p>
+			Copyright  The University of Tokyo &amp; FUJITSU LIMITED
+		</p>
+	</div>
+</footer>
+
+</body>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script
+src="http://cdnjs.cloudflare.com/ajax/libs/vis/4.15.1/vis.min.js"></script>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script
+src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+
+<!-- Magnific Popup core JS file -->
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+
+<script type="text/javascript">
+$(function() {
+	sparql();
+});
+
+var items;
+var timeline;
+var idMap = new Object();
+
+var initial_flg = true;
+
+$("#search").click(function() {
+	var stages = [];
+	$('[id="inlineCheckbox"]:checked').each(function() {
+		stages.push($(this).val());
+	});
+	//全選択されている場合
+	if (stages.length == 4) {
+		return false;
+	} else {
+		sparql(stages);
+	}
+});
+
+function sparql(arr) {
+
+	var query = $("#query").val();
+
+	var query = "";
+	query += "PREFIX dc: <"+"http://purl.org/dc/elements/1.1/"+">  \n";
+	query += "PREFIX kd: <"+"http://kashiwade.org/2012/09/kd#"+">  \n";
+	query += "SELECT DISTINCT * \n";
+	query += "WHERE { \n";
+	query += "?s dc:date ?date . \n";
+	query += "?s dc:title ?title . \n";
+	query += "?s kd:color ?color . \n";
+	query += "?s dc:creator ?creator . \n";
+	//query += "?s kd:stage ?stage . \n";
+	query += "?s dc:publisher ?publisher . \n";
+
+	if (arr != null) {
+		query += "{ \n";
+		for (var i = 0; i < arr.length; i++) {
+			query += " { ?s kd:stage ?stage . filter regex(?stage , '"
+			+ arr[i] + "') . } \n";
+			if (i != arr.length - 1) {
+				query += "UNION \n";
+			}
+		}
+		query += "} \n";
+	} else {
+		query += "?s kd:stage ?stage . \n";
+	}
+
+	query += "} \n";
+
+	var tbody = $("#tbody_main");
+
+	jQuery
+	.ajax({
+		type : "POST",
+		url : "https://dydra.com/ut-digital-archives/fujitsu/sparql",
+		data : {
+			query : query,
+			format : "json"
+		},
+		success : function(data) {
+			var result = data.results.bindings;
+
+			var array = new Array();
+			var groupArray = new Array();
+
+			for (var i = 0; i < result.length; i++) {
+				var obj = result[i];
+				var s = obj.s.value;
+				var title = obj.title.value;
+				var date = obj.date.value;
+				var color = obj.color.value;
+
+				var item = new Object();
+				item.start = date;
+				item.content = title;
+				item.group = color;
+				item.uri = s;
+				item.className = color;
+				array.push(item);
+
+				if (groupArray.indexOf(color) == -1) {
+					groupArray.push(color);
+				}
+
+				if (initial_flg) {
+					//表
+					var tr = $("<tr>");
+					tbody.append(tr);
+
+					var td = $("<td>");
+					tr.append(td);
+					td.append(title);
+
+					td = $("<td>");
+					tr.append(td);
+					td.append(obj.creator.value);
+
+					td = $("<td>");
+					tr.append(td);
+					td.append(obj.publisher.value);
+
+					td = $("<td>");
+					tr.append(td);
+					td.append(formatDate(date));
+
+					td = $("<td>");
+					tr.append(td);
+					td.append(obj.stage.value);
+
+					td = $("<td>");
+					tr.append(td);
+					var button = $("<button>");
+					td.append(button);
+					button.attr("onClick", "getMetadata('" + s
+					+ "')");
+					button.attr("class", "btn btn-default");
+					button.append("表示");
+				}
+
+			}
+
+			if (initial_flg) {
+				// Setup - add a text input to each footer cell
+				$('#table_main tfoot th')
+				.each(
+					function() {
+						var title = $(this).text();
+						$(this)
+						.html(
+							'<input type="text" placeholder="Search '+title+'" />');
+						});
+
+						var table = $('#table_main').DataTable({
+							"order" : [ [ 3, "asc" ] ]
+						});
+
+						// Apply the search
+						table
+						.columns()
+						.every(
+							function() {
+								var that = this;
+
+								$('input', this.footer())
+								.on(
+									'keyup change',
+									function() {
+										if (that
+											.search() !== this.value) {
+												that
+												.search(
+													this.value)
+													.draw();
+												}
+											});
+										});
+									}
+
+									initial_flg = false;
+
+									var groups = new vis.DataSet();
+									for (var i = 0; i < groupArray.length; i++) {
+										var obj = new Object();
+										obj.id = groupArray[i];
+										//obj.content = groupArray[i];
+										obj.content = "";
+										groups.add(obj);
+									}
+
+									// create data
+									// note that months are zero-based in the JavaScript Date object
+									items = new vis.DataSet(array);
+
+									for ( var id in items["_data"]) {
+										var uri = items["_data"][id].uri;
+										idMap[uri] = id;
+									}
+
+									// create the timeline
+									$("#mytimeline").empty();//初期化
+									var container = document.getElementById('mytimeline');
+									timeline = new vis.Timeline(container);
+									timeline.setGroups(groups);
+									timeline.setItems(items);
+
+									timeline.on('select', function(properties) {
+										var id = properties.items[0];
+
+										var uri = items["_data"][id].uri;
+
+										getMetadata(uri);
+									});
+								},
+								error : function(data) {
+									alert(data.statusText);
+								}
+							});
+						}
+
+						function getMetadata(uri) {
+
+							$.magnificPopup.open({
+								items : {
+									src : '#test-popup'
+								},
+								type : 'inline'
+							});
+
+							var query = $("#query").val();
+
+							var query = "";
+							query += "PREFIX rdfs: <"+"http://www.w3.org/2000/01/rdf-schema#"+">  \n";
+							query += "SELECT DISTINCT * \n";
+							query += "WHERE { \n";
+							query += "<"+uri+"> ?p ?o . \n";
+							query += " ?p rdfs:label ?label . \n";
+							query += "} \n";
+
+							jQuery
+							.ajax({
+								type : "POST",
+								url : "https://dydra.com/ut-digital-archives/fujitsu/sparql",
+								data : {
+									query : query,
+									format : "json"
+								},
+								success : function(data) {
+									var result = data.results.bindings;
+
+									var tbody = $("#tbody");
+									tbody.empty();
+
+									for (var i = 0; i < result.length; i++) {
+										var obj = result[i];
+										var p = obj.p.value;
+										var o = obj.o.value;
+										var label = obj.label.value;
+
+										var tr = $("<tr>");
+										tbody.append(tr);
+
+										var td = $("<td>");
+										tr.append(td);
+										td.append(label);
+
+										var td = $("<td>");
+										tr.append(td);
+										if (obj.o.type.indexOf("literal") != -1) {
+											if (obj.o.datatype == "http://www.w3.org/2001/XMLSchema#date") {
+												td.append(formatDate(o));
+											} else {
+												td.append(o);
+											}
+
+										} else {
+											var a = $("<a>");
+											td.append(a);
+											a.attr("href", o);
+											a.append(o);
+										}
+
+									}
+									;
+
+									showNetwork(uri);
+
+								},
+								error : function(data) {
+									alert(data.statusText);
+								}
+							});
+						}
+
+						function showNetwork(uri) {
+
+							var container = document.getElementById('mynetwork');
+							$("#mynetwork").empty();
+
+							var query = "";
+							query += "PREFIX dc: <"+"http://purl.org/dc/elements/1.1/"+">  \n";
+							query += "PREFIX kd: <"+"http://kashiwade.org/2012/09/kd#"+">  \n";
+							query += "SELECT DISTINCT * \n";
+							query += "WHERE { \n";
+							query += "?s ?p ?o . ?s dc:title ?sTitle . ?o dc:title ?title . \n";
+							query += "?s dc:date ?sDate . ?o dc:date ?oDate . \n";
+							query += "?s dc:publisher ?sPub . ?o dc:publisher ?oPub . \n";
+							query += " { ?s ?p ?o . filter (?s = <"+uri+">) } \n";
+							query += " UNION \n";
+							query += " { ?s ?p ?o . filter (?o = <"+uri+">) } \n";
+
+							query += " { ?s ?p ?o . filter (?p = kd:before) } \n";
+							query += " UNION \n";
+							query += " { ?s ?p ?o . filter (?p = kd:after) } \n";
+							//query += " { <"+uri+"> kd:after ?o . ?o dc:title ?title . } \n";
+							query += "} \n";
+
+							jQuery.ajax({
+								type : "POST",
+								url : "https://dydra.com/ut-digital-archives/fujitsu/sparql",
+								data : {
+									query : query,
+									format : "json"
+								},
+								success : function(data) {
+									var result = data.results.bindings;
+
+									var div = $("#network");
+									if (result.length == 0) {
+										div.attr("style", "display : none");
+										return false;
+									}
+
+									div.attr("style", "display : block");
+
+									var nodeArray = new Array();
+									var edgeArray = new Array();
+
+									var uriArray = new Array();
+
+									for (var i = 0; i < result.length; i++) {
+										var obj = result[i];
+										var p = obj.p.value;
+										var o = obj.o.value;
+										var title = obj.title.value;
+										var sTitle = obj.sTitle.value;
+										var s = obj.s.value;
+
+										if (uriArray.indexOf(s) == -1) {
+											//主語
+											var node = new Object();
+											node.id = s;
+											node.label = sTitle + "\r\n\r\n"
+											+ formatDate(obj.sDate.value) + " @ "
+											+ obj.sPub.value;
+											if (uri == s) {
+												node.color = 'rgb(255,168,7)';
+											}
+
+											node.shape = 'box';
+											nodeArray.push(node);
+
+											uriArray.push(s);
+										}
+
+										if (uriArray.indexOf(o) == -1) {
+											//目的語
+											var node = new Object();
+											node.id = o;
+											node.label = title + "\r\n\r\n"
+											+ formatDate(obj.oDate.value) + " @ "
+											+ obj.oPub.value;
+											node.shape = 'box';
+											if (uri == o) {
+												node.color = 'rgb(255,168,7)';
+											}
+											nodeArray.push(node);
+
+											uriArray.push(o);
+										}
+
+										var edge = new Object();
+										edge.arrows = 'to';
+										if (p == "http://kashiwade.org/2012/09/kd#before") {
+											edge.from = o;
+											edge.to = s;
+										} else {
+											edge.from = s;
+											edge.to = o;
+										}
+
+										if (edgeArray.indexOf(edge) == -1) {
+											edgeArray.push(edge);
+										}
+
+									}
+									;
+
+									var nodes = new vis.DataSet(nodeArray);
+									var edges = new vis.DataSet(edgeArray);
+
+									// create a network
+
+									var data = {
+										nodes : nodes,
+										edges : edges
+									};
+									var options = {
+										layout : {
+											hierarchical : {
+												direction : "UD",
+												sortMethod : "directed"
+											}
+										}
+									};
+									var network = new vis.Network(container, data, options);
+
+									//
+
+									network.on("click", function(params) {
+										var uri = params.nodes[0];
+
+										if (uri != null) {
+											getMetadata(uri);
+											var ids = new Array();
+											ids.push(idMap[uri]);
+											timeline.setSelection(ids, {
+												focus : focus.checked
+											});
+										}
+
+									});
+								},
+								error : function(data) {
+									alert(data.statusText);
+								}
+							});
+						}
+
+						function formatDate(date) {
+							var str = date.split("-");
+							return str[0] + "年" + Number(str[1]) + "月" + Number(str[2]) + "日";
+						}
+
+						// ライブラリのロード
+						// name:visualization(可視化),version:バージョン(1),packages:パッケージ(corechart)
+						google.load('visualization', '1', {
+							'packages' : [ 'corechart' ]
+						});
+
+						// グラフを描画する為のコールバック関数を指定
+						//google.setOnLoadCallback(statistics);
+
+						function statistics() {
+
+							//分類対象PropertyのArray
+							var pArray = new Array();
+
+							var obj = new Object();
+							obj.uri = "http://purl.org/dc/terms/creator";
+							obj.id = "creator";
+							obj.name = "著者別";
+							obj.sort = true;
+							pArray.push(obj);
+
+							var obj = new Object();
+							obj.uri = "http://purl.org/dc/terms/subject";
+							obj.id = "subject";
+							obj.name = "キーワード別";
+							obj.sort = true;
+							pArray.push(obj);
+
+							var obj = new Object();
+							obj.uri = "http://kashiwade.org/2012/09/kd#position";
+							obj.id = "stage";
+							obj.name = "段階別";
+							obj.sort = false;
+							pArray.push(obj);
+
+							var obj = new Object();
+							obj.uri = "http://purl.org/dc/elements/1.1/date";
+							obj.id = "date";
+							obj.name = "発表/公開年別";
+							obj.sort = false;
+							pArray.push(obj);
+
+							for (var j = 0; j < pArray.length; j++) {
+
+								var pObj = pArray[j];
+
+								drawChar(pObj);
+							}
+
+						}
+
+						function drawChar(pObj) {
+							var query = "";
+							query += "SELECT DISTINCT * \n";
+							query += "WHERE { \n";
+							query += "?s <"+pObj.uri+"> ?o . \n";
+							query += "} \n";
+
+							jQuery.ajax({
+								type : "POST",
+								url : "https://dydra.com/ut-digital-archives/fujitsu/sparql",
+								data : {
+									query : query,
+									format : "json"
+								},
+								success : function(data) {
+									var result = data.results.bindings;
+
+									//console.log(result);
+
+									//目的語別の頻度
+									var hist = new Object();
+
+									for (var i = 0; i < result.length; i++) {
+										var obj = result[i];
+										var s = obj.s.value;
+										var o = obj.o.value;
+
+										//発表日の場合は、年単位に変換
+										if (pObj.id == "date") {
+											o = o.split("-")[0];
+										}
+
+										//目的語別の頻度計算
+										if (hist[o] == null) {
+											hist[o] = 0;
+										}
+
+										hist[o] = hist[o] + 1;
+
+									}
+
+									//itemsの作成
+									var items = new Array();
+									var array = new Array();
+									array.push("");
+									array.push("論文数");
+									items.push(array);
+
+									//配列に変換
+									var arr;
+									if (pObj.sort) {
+										arr = sortObject(hist);
+									} else {
+										arr = new Array();
+										for (key in hist) {
+											var obj = new Object();
+											obj.key = key;
+											obj.value = hist[key];
+											arr.push(obj);
+										}
+									}
+
+									//最大表示数の設定
+									var max = 20;
+									if (arr.length < max) {
+										max = arr.length;
+									}
+
+									for (var i = 0; i < max; i++) {
+										var obj = arr[i];
+										var array = new Array();
+										array.push(obj.key);
+										array.push(obj.value);
+										items.push(array);
+									}
+									var data = google.visualization.arrayToDataTable(items);
+
+									// オプションの設定
+									var options = {
+										title : pObj.name
+									};
+
+									//Divの作成
+									var div = $("<div>");
+									$("#statistics").append(div);
+									div.attr("class", "panel panel-default");
+
+									var body = $("<div>");
+									div.append(body);
+									body.attr("id", pObj.id);
+									body.attr("class", "panel-body");
+
+									/*
+									<div class="panel panel-default" id="network">
+									<div class="panel-heading">論文間の関係性</div>
+									<div class="panel-body">
+									*/
+
+									// 指定されたIDの要素に棒グラフを作成
+									var chart = new google.visualization.ColumnChart(document
+										.getElementById(pObj.id));
+
+										google.visualization.events.addListener(chart, 'select',
+										selectHandler);
+
+										function selectHandler(e) {
+											var selectedItem = chart.getSelection()[0];
+											if (selectedItem) {
+												console.log(data);
+												//var value = data.getValue(selectedItem.row, selectedItem.column);
+												//alert('The user selected ' + value);
+											}
+										}
+
+										// グラフの描画
+										chart.draw(data, options);
+									},
+									error : function(data) {
+										alert(data.statusText);
+									}
+								});
+							}
+
+							//Sort
+							function sortObject(obj) {
+								var arr = [];
+								var prop;
+								for (prop in obj) {
+									if (obj.hasOwnProperty(prop)) {
+										arr.push({
+											'key' : prop,
+											'value' : obj[prop]
+										});
+									}
+								}
+								arr.sort(function(a, b) {
+									return b.value - a.value;
+								});
+								return arr; // returns array
+							}
+							</script>
+						</body>
+						</html>

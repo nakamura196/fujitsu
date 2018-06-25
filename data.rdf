@@ -1,0 +1,537 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:fn="http://www.w3.org/2005/xpath-functions/#"
+    xmlns:xslwd="http://www.w3.org/TR/WD-xsl"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:ldp="http://www.w3.org/ns/ldp#"
+    xmlns:yago="http://dbpedia.org/class/yago/"
+    xmlns:nci="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+    xmlns:xsl10="http://www.w3.org/XSL/Transform/1.0"
+    xmlns:ogcsf="http://www.opengis.net/ont/sf#"
+    xmlns:virtcxml="http://www.openlinksw.com/schemas/virtcxml#"
+    xmlns:product="http://www.buy.com/rss/module/productV2/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:j.0="http://purl.org/dc/terms/"
+    xmlns:obo="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:ogc="http://www.opengis.net/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:sql="sql:"
+    xmlns:xf="http://www.w3.org/2004/07/xpath-functions"
+    xmlns:math="http://www.w3.org/2000/10/swap/math#"
+    xmlns:protseq="http://purl.org/science/protein/bysequence/"
+    xmlns:mf="http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:xsl1999="http://www.w3.org/1999/XSL/Transform"
+    xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.1="http://kashiwade.org/2012/09/kd#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:virtrdf="http://www.openlinksw.com/schemas/virtrdf#"
+    xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+    xmlns:rdfdf="http://www.openlinksw.com/virtrdf-data-formats#"
+    xmlns:ogcgml="http://www.opengis.net/ont/gml#"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ogcgsf="http://www.opengis.net/def/function/geosparql/"
+    xmlns:sc="http://purl.org/science/owl/sciencecommons/"
+    xmlns:dbpprop="http://dbpedia.org/property/"
+    xmlns:ogcgsr="http://www.opengis.net/def/rule/geosparql/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:dawgt="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"
+    xmlns:scovo="http://purl.org/NET/scovo#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:bif="bif:"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+    xmlns:mesh="http://purl.org/commons/record/mesh/"
+    xmlns:vcard2006="http://www.w3.org/2006/vcard/ns#"
+    xmlns:ogcgs="http://www.opengis.net/ont/geosparql#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" > 
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/55519">
+    <j.0:creator>小峰正美</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>彭聨凱</j.0:creator>
+    <j.0:creator>田邊誠一郎</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>IT企業では過去に開発した大量のプログラム関連資産を蓄積している。担当者や同一組織内において資産は再利用はなされているものの、組織を跨いで資産を把握・共有・ 再利用できている例は少ない。本稿では、プログラム関連資産共有のための取り組みの全貌を紹介するとともに、プログラム関連資産の一部である設計書を基に機械学習を行い、自動的にプログラム関連資産を可視化する手法を提案する。 これにより、既存プログラム関連資産の正確な現状把握や、客観的な根拠に基づくプログラム開発可否の適切な判断支援を狙う。また、IT企業の一部の既存プログラム関連資産に対して、本可視化手法を試験活用した結果を評価する。</j.0:abstract>
+    <j.1:position>仮説設定</j.1:position>
+    <dc:title>既存プログラム関連資産共有のための機械学習の活用</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-07-31</dc:date>
+    <j.1:color>yellow</j.1:color>
+    <j.1:stage>仮説設定段階</j.1:stage>
+    <dc:creator>笈田佳彰，岡田伊策，齋藤稔，田邊誠一郎, 彭聨凱, 小峰正美, 稗方和夫</dc:creator>
+    <dc:description>SIG-KST-2013-01-01</dc:description>
+    <dc:publisher>人工知能学会第2種研究会(SIG-KST)</dc:publisher>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>プログラム関連資産</j.0:subject>
+    <j.0:subject>可視化手法</j.0:subject>
+    <j.0:subject>機械学習</j.0:subject>
+    <j.0:subject>知識再利用</j.0:subject>
+    <j.0:subject>部品再利用</j.0:subject>
+    <j.0:subject>開発可否判断支援</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/55519/1/Hiekata_SIG-KST-2013-01-01.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/56103">
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>松本滋</j.0:creator>
+    <j.0:creator>渡辺郁雄</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>ICT企業では過去の設計ドキュメントが多量に蓄積されている。一方で、新規開発やパッケージの追加開発時の既存設計ドキュメント活用度合は、設計者の経験に依存している。設計品質のバラつきは、後工程でさまざな不具合を誘発し、情報システム開発期間の延長、工数増大による損益の悪化につながっている。ベテラン設計者がどのように設計情報を効果的に再利用しているかの調査を行い、調査結果に基づいて既存文書の活用方法を提案する。</j.0:abstract>
+    <j.1:position>仮説設定</j.1:position>
+    <dc:title>設計品質向上のための既存設計ドキュメント活用方法の提案</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-03-05</dc:date>
+    <j.1:before rdf:resource="http://hdl.handle.net/2261/52153"/>
+    <j.1:color>green</j.1:color>
+    <j.1:stage>仮説設定段階</j.1:stage>
+    <dc:creator>齋藤稔, 岡田伊策, 笈田佳彰, 渡辺郁雄, 松本滋, 稗方和夫</dc:creator>
+    <dc:description>SIG-KST-2013-03-01</dc:description>
+    <dc:publisher>人工知能学会第2種研究会(SIG-KST)</dc:publisher>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>設計ナレッジ</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/56103/1/Hiekata_SIG-KST-2013-03-01.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+    <rdfs:label>学会名</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+    <rdfs:label>論文へのリンク</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dx.doi.org/10.1007/978-3-642-37996-3_17">
+    <j.0:creator>三浦慎也</j.0:creator>
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>In businesses and organizations, it is difficult to find the successor for various activities by considering a person’s knowledge and actual experience. In this study, we find the successor to a member of a standardization activity. By assigning metadata to profiles and annual activity reports of members engaged in standardization activities, the relationship between the profiles and the annual activity reports is described as an RDF graph and visualized with nodes and links. This paper has two objectives. Objective-1 is the development and evaluation of a method to design the best combination of search queries to discover an appropriate successor. Objective-2 is the proposal and evaluation of an easy and understandable visualization method of the successor search results obtained in objective-1. The proposed procedure nominates candidates for the successor effectively and the results are visualized in the case study.</j.0:abstract>
+    <j.1:position>開発・仮説検証</j.1:position>
+    <dc:title>Development of the method for the appropriate selection of the successor by applying metadata to the standization reports and members</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-04</dc:date>
+    <j.1:before rdf:resource="http://hdl.handle.net/2261/5215"/>
+    <j.1:color>blue2</j.1:color>
+    <j.1:stage>開発・仮説検証段階</j.1:stage>
+    <dc:creator>Isaac OKADA, Minoru SAITO, Yoshiaki OIDA, Hiroyuki YAMATO, Kazuo HIEKATA and Shinya MIURA</dc:creator>
+    <dc:description>Springer Berlin Heidelberg, pp. 255-266</dc:description>
+    <dc:publisher>JIST2012: The 2nd Joint International Semantic Technology Conference</dc:publisher>
+    <j.0:subject>RDF</j.0:subject>
+    <j.0:subject>metadata</j.0:subject>
+    <j.0:subject>semantic technology</j.0:subject>
+    <dc:source rdf:resource="http://download.springer.com/static/pdf/76/bok%253A978-3-642-37996-3.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Fbook%2F10.1007%2F978-3-642-37996-3&amp;token2=exp=1459902046~acl=%2Fstatic%2Fpdf%2F76%2Fbok%25253A978-3-642-37996-3.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Fbook%252F10.1007%252F978-3-642-37996-3*~hmac=1c6243f5962b4c82488bb92d6b0eb545ff600b1289e993a31b7c1b09513fe7fd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/53655">
+    <j.0:creator>中村覚</j.0:creator>
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>安藤峻</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>情報システム企業では情報システム製品の顧客環境での運用時のインシデント情報を収集している。本研究は、新しいインシデントを効率的に解決するために既存のインシデントレポートの知識を再利用することを目的とする。分類対象に依存したテキスト処理以外の共通部分をプラットホーム化することで横展開可能な文書自動分類プログラムを開発し、特定の文書群について自動分類を行い、その有用性の検証を行う。</j.0:abstract>
+    <j.1:position>開発・仮説検証</j.1:position>
+    <dc:title>インシデントレポートの自動分類とその分析環境の構築</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-03-04</dc:date>
+    <j.1:after rdf:resource="http://hdl.handle.net/2261/55518"/>
+    <j.1:color>blue</j.1:color>
+    <j.1:stage>開発・仮説検証段階</j.1:stage>
+    <dc:creator>稗方和夫, 大和裕幸, 中村覚, 岡田伊策, 齋藤稔, 安藤峻</dc:creator>
+    <dc:description>SIG-KST-2012-03-03</dc:description>
+    <dc:publisher>人工知能学会第2種研究会(SIG-KST)</dc:publisher>
+    <j.0:subject>サポートベクターマシーン</j.0:subject>
+    <j.0:subject>分類</j.0:subject>
+    <j.0:subject>機械学習</j.0:subject>
+    <j.0:subject>知識獲得</j.0:subject>
+    <j.0:subject>自然言語処理</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/53655/1/Hiekata_SIG-KST-2012-03-03.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdfs:label>タイトル</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/56369">
+    <j.0:creator>中村覚</j.0:creator>
+    <j.0:creator>堀口隆三</j.0:creator>
+    <j.0:creator>増田幸司</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>阿部雅昭</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>パッケージによるシステム導入はコストや保守性の観点から、実績ノウハウの再利用が重要である。パッケージ導入ベンダーは、顧客の要件に合致するように既存ノウハウを詳細かつ最大限に再利用し、システム設計・構築することが求められる。しかしノウハウ事例の探索・選別プロセスに要する時間および探索結果の網羅性は、探索者の能力・暗黙知に依存する。本研究ではパッケージによるシステム導入時の設計におけるコスト削減や構築時間の短縮を目的とし、実績ノウハウ情報を構造化し、要件に合致するノウハウ事例の抽出を支援するシステムを開発した。 そのシステムをERPパッケージに適用することで、有用性の検証を行った。</j.0:abstract>
+    <j.1:position>開発・仮説検証</j.1:position>
+    <dc:title>顧客要件に合致するパッケージシステムのノウハウ事例抽出支援システムの開発</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-21</dc:date>
+    <j.1:after rdf:resource="http://hdl.handle.net/2261/58513"/>
+    <j.1:color>purple</j.1:color>
+    <j.1:stage>開発・仮説検証段階</j.1:stage>
+    <dc:creator>中村覚, 稗方和夫, 岡田伊策, 齋藤稔, 笈田佳彰, 増田幸司, 阿部雅昭, 堀口隆三</dc:creator>
+    <dc:description>SIG-KST-2014-02-01</dc:description>
+    <dc:publisher>人工知能学会第2種研究会(SIG-KST)</dc:publisher>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>RDF</j.0:subject>
+    <j.0:subject>オントロジー</j.0:subject>
+    <j.0:subject>セマンティックウェブ</j.0:subject>
+    <j.0:subject>設計ナレッジ</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/56369/1/SIG-KST-2014-02-01.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdfs:label>著者</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/52154">
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>本研究では多くの企業においてPowerPoint形式で表現される提案書のための文書情報管理システムの開発を目指す。URIを用いて提案書をスライド単位で管理し、RDFにより属性を付与し、類似スライドを関連付けることで既存提案書の再利用効率の向上、特に候補スライドの網羅的な検索を実現した。ケーススタディにより、本システムを用いることで効率的に広い検索領域から適切なスライドを抽出できることを示した。
+Presentation creation support system was developed. Presentations are managed as a slide unit using URI. Diverse information is attached to each slide by RDF to improve search efficiency. Especially, connecting similar slides based on the slide image and the text in the slide is effective to search enough candidate slides for reuse. Case study illustrates that the time required for presentation creation is reduced by around 20% using the system and the created presentation includes the more various slides which are included in different existing presentation files.</j.0:abstract>
+    <j.1:position>開発・仮説検証</j.1:position>
+    <dc:title>プロジェクト提案のための文書情報管理システムの開発</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</dc:date>
+    <j.1:after rdf:resource="http://hdl.handle.net/2261/53452"/>
+    <j.1:before rdf:resource="http://hdl.handle.net/2261/52152"/>
+    <j.1:color>red</j.1:color>
+    <j.1:stage>開発・仮説検証段階</j.1:stage>
+    <dc:creator>稗方和夫, 大和裕幸, 笈田佳彰, 岡田伊策, 齋藤稔</dc:creator>
+    <dc:description>3D1-R-13-2</dc:description>
+    <dc:publisher>2012年度人工知能学会全国大会</dc:publisher>
+    <j.0:subject>プレゼンテーション</j.0:subject>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>Document Management</j.0:subject>
+    <j.0:subject>Knowlege Management</j.0:subject>
+    <j.0:subject>PowerPoint</j.0:subject>
+    <j.0:subject>Presentation</j.0:subject>
+    <j.0:subject>RDF</j.0:subject>
+    <j.0:subject>meta-data</j.0:subject>
+    <j.0:subject>metadata</j.0:subject>
+    <j.0:subject>ナレッジマネジメント</j.0:subject>
+    <j.0:subject>文書管理</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/52154/1/Hiekata_JSAI2012_3D1-R-13-2.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/52152">
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>本研究では多くの企業においてPowerPoint形式で作成されるプレゼンテーションのための作成支援システムの開発を目指す。プレゼンテーションファイルをスライド単位で管理し、メタデータを用いた属性付与や類似スライドの関連付けによる効率的なスライド検索方法と目次インターフェイスを用いた効率的なプレゼンテーション作成手法を提案する。
+Presentation creation support system was developed. Presentations are managed as a slide unit using URI. Diverse information is attached to each slide as RDF metadata to improve search efficiency. Especially, associating similar slides based on the slide image and the text in the slide is effective to retrieve enough candidate slides for reuse. Case study illustrates that the time required for creating a presentation is reduced by around 20% using the system and the created presentation includes the more various slides which are included in different existing presentation files.</j.0:abstract>
+    <j.1:position>開発・仮説検証</j.1:position>
+    <dc:title>プレゼンテーション作成支援システムの開発</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03-01</dc:date>
+    <j.1:after rdf:resource="http://hdl.handle.net/2261/52154"/>
+    <j.1:color>red</j.1:color>
+    <j.1:stage>開発・仮説検証段階</j.1:stage>
+    <dc:creator>稗方和夫, 大和裕幸, 笈田佳彰, 岡田伊策, 齋藤稔</dc:creator>
+    <dc:description>SIG-KST-2011-03-01</dc:description>
+    <dc:publisher>人工知能学会第2種研究会(SIG-KST)</dc:publisher>
+    <j.0:subject>プレゼンテーション</j.0:subject>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>Knowlege Management</j.0:subject>
+    <j.0:subject>PowerPoint</j.0:subject>
+    <j.0:subject>Presentation</j.0:subject>
+    <j.0:subject>RDF</j.0:subject>
+    <j.0:subject>meta-data</j.0:subject>
+    <j.0:subject>metadata</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/52152/1/Hiekata_SIG-KST-2011-03-01.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/55517">
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>松岡伸治</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>企業における重要な業務のひとつであるプロジェクト提案作成を効率化するために、既存プレゼンテーションを効率的に再利用できるシステムを開発した。既報のように、既存プロジェクト提案ファイル群をスライド単位に自動分割して、メタデータを自動付与し、スライド単位で目的スライドを網羅的に検索・収集・再利用できるようにした。本論文では、ＩCＴ企業の具体的な現場で本システムを実運用した事例について検証する。
+Making proposals for project is one of the important tasks in the business. For streamlining this tasks, the document and information management system which can efficiently reuse the existing proposals for project was developed. As previously reported, the system separates existing proposal files to each slide, and grants metadata to each slides. The users can search existing slides in the document and information management system comprehensively and efficiently then find the most appropriate and useful slides. In this paper, we verified the real operation cases in the ICT company and suggested the important points for practical realization of the document and information management system.</j.0:abstract>
+    <j.1:position>実用化</j.1:position>
+    <dc:title>プロジェクト提案のための文書情報管理システムの開発と実用化</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-06-04</dc:date>
+    <j.1:before rdf:resource="http://hdl.handle.net/2261/53452"/>
+    <j.1:color>red</j.1:color>
+    <j.1:stage>実用化段階</j.1:stage>
+    <dc:creator>岡田伊策，齋藤稔，松岡伸治, 笈田佳彰，大和裕幸, 稗方和夫</dc:creator>
+    <dc:description>1D5-3</dc:description>
+    <dc:publisher>2013年度人工知能学会全国大会</dc:publisher>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>スライド素材収集</j.0:subject>
+    <j.0:subject>プレゼンテーション作成支援</j.0:subject>
+    <j.0:subject>プロジェクト提案</j.0:subject>
+    <j.0:subject>実用化</j.0:subject>
+    <j.0:subject>提案書作成支援</j.0:subject>
+    <j.0:subject>提案素材収集</j.0:subject>
+    <j.0:subject>文書情報管理</j.0:subject>
+    <j.0:subject>知識再利用</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/55517/1/Hiekata_JSAI2013_1D5-3.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/abstract">
+    <rdfs:label>概要</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/58513">
+    <j.0:creator>中村覚</j.0:creator>
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>本研究ではセマンティックWeb技術を用い、文書や画像等のデジタル資産とドメイン固有の知識を紐づけて管理するシステム基盤「KASHIWADE」を開発した。概念をノード、関係性をリンクによって表現するドメイン知識の記述支援機能、デジタル資産からのメタデータ自動抽出によるドメイン知識への関連付け機能を有する。本システム基盤を情報システム開発におけるデジタル資産管理に適用し、設計書・設計知識の再利用性の向上を確認した。
+In this study, the platform system for Digital Asset Management which manages digital assets such as documents or images and domain-specific knowledge integrally with Semantic Web was developed. This system provides the functions to support the description of domain knowledge with nodes and links, and to relate it to digital assets with metadata extracted automatically from them. This system was applied to the management of design documents and knowledge in Information System Development, and the effectiveness of developed system was verified.</j.0:abstract>
+    <j.1:position>実証</j.1:position>
+    <j.1:position>開発・仮説検証</j.1:position>
+    <dc:title>ドメイン知識の記述支援と活用のためのデジタル資産管理システム基盤「KASHIWADE」の開発 – 情報システム開発における設計書・設計知識への適用</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-03-05</dc:date>
+    <j.1:before rdf:resource="http://hdl.handle.net/2261/56330"/>
+    <j.1:before rdf:resource="http://hdl.handle.net/2261/56369"/>
+    <j.1:color>black</j.1:color>
+    <j.1:stage>開発・仮説検証段階＋実証段階</j.1:stage>
+    <dc:creator>中村覚, 大和裕幸, 稗方和夫, 岡田伊策, 齋藤稔, 笈田佳彰</dc:creator>
+    <dc:description>2M5-4</dc:description>
+    <dc:publisher>2015年度人工知能学会全国大会</dc:publisher>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>セマンティックWeb</j.0:subject>
+    <j.0:subject>デジタル資産管理</j.0:subject>
+    <j.0:subject>ナレッジマネジメント</j.0:subject>
+    <j.0:subject>設計知識</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/58513/1/2M5-4.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/56330">
+    <j.0:creator>中村覚</j.0:creator>
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>松本滋</j.0:creator>
+    <j.0:creator>深田直人</j.0:creator>
+    <j.0:creator>渡辺郁雄</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>When an IT company introduces a new large scale system, many design documents are created. However, when a specification change of the system happens, the design documents which are related to the specification change can't be extracted efficiently and the engineers can't identify affected range because the extraction of these non-associated documents depends heavily on the experiences of the engineers. Therefore, in order to improve design quality and to introduce the system efficiently, it is of vital importance for the engineers to extract the susceptible affected design documents. In this paper, the method semi-automatically generating metadata to design document and linking design information using the ER diagrams and the CRUD matrixes which are generated in the initial design phase is proposed. Besides, the system of extracting the design documents which are associated to the specification change and specifying impact ranges of the specification changes is developed. In case study, the system is evaluated.</j.0:abstract>
+    <j.1:position>開発・仮説検証</j.1:position>
+    <dc:title>システムの仕様変更調査における設計情報を用いた影響分析システムの開発</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-09-01</dc:date>
+    <j.1:before rdf:resource="http://hdl.handle.net/2261/56103"/>
+    <j.1:color>green</j.1:color>
+    <j.1:stage>開発・仮説検証段階</j.1:stage>
+    <dc:creator>稗方和夫, 大和裕幸, 深田直人, 中村覚, 岡田伊策, 齋藤稔, 笈田佳彰, 渡辺郁雄, 松本滋</dc:creator>
+    <dc:description>pp.1305</dc:description>
+    <dc:publisher>日本機械学会第24回設計工学・システム部門講演会</dc:publisher>
+    <j.0:subject>Ontology</j.0:subject>
+    <j.0:subject>Impact Analysis</j.0:subject>
+    <j.0:subject>Information Retrieval</j.0:subject>
+    <j.0:subject>Metadata</j.0:subject>
+    <j.0:subject>RDF</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/56330/2/D%26S2014_1305.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/5215">
+    <j.0:creator>三浦慎也</j.0:creator>
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>多数の社外標準化活動従事者がいる総合情報通信企業において、活動者の定期活動レポートを、自然言語処理で解析してメタデータを付与、その活動を見える化した。この結果、各標準化活動従事者のテーマの関係性をネスト状に表現できるようになった。これにより、例えば前任退任時に、近いテーマ・人脈を保有する活動従事者を合理的に抽出し、後任候補を選定できるようになった。今後は組織的な人材育成での活用も目指す。
+A model system which can visualize the relationship between knowledge and actual experiences in the Fujitsu's standardization activities has been developed. By applying meta-data to profiles and annual activity-reports of members who are engaged in the standardization activities, the relationship between the profiles and the annual activity-reports has been visualized as RDF graph. It facilitates nominating the successor who has similar knowledge and experience to current members, reasonably and appropriately.</j.0:abstract>
+    <j.1:position>仮説設定</j.1:position>
+    <dc:title>標準化活動者へのメタデータ付与による活動の見える化と合理的な後任候補者選定</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</dc:date>
+    <j.1:after rdf:resource="http://dx.doi.org/10.1007/978-3-642-37996-3_17"/>
+    <j.1:color>blue2</j.1:color>
+    <j.1:stage>仮説設定段階</j.1:stage>
+    <dc:creator>岡田伊策，齋藤稔，大和裕幸，稗方和夫，笈田佳彰, 三浦慎也</dc:creator>
+    <dc:description>3C2-OS-13b-5</dc:description>
+    <dc:publisher>2012年度人工知能学会全国大会</dc:publisher>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>RDFグラフ</j.0:subject>
+    <j.0:subject>knowledge</j.0:subject>
+    <j.0:subject>meta-data</j.0:subject>
+    <j.0:subject>metadata</j.0:subject>
+    <j.0:subject>tf-idf</j.0:subject>
+    <j.0:subject>オントロジー</j.0:subject>
+    <j.0:subject>ナレッジ</j.0:subject>
+    <j.0:subject>文書管理</j.0:subject>
+    <j.0:subject>見える化</j.0:subject>
+    <j.0:subject>選択情報量</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/52155/1/Hiekata_JSAI2012_3C2-OS-13b-5.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/53452">
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>松岡伸治</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>企業における重要な業務のひとつであるプロジェクト提案書作成を効率化するために、既存プロジェクト提案データファイルを効率的に再利用できるシステムを開発した。既報のように、既存プロジェクト提案データファイル群をスライド単位に自動分割して、メタデータを自動付与し、スライド単位で目的スライドを網羅的に検索・収集・再利用できるようにした。本論文では、ＩＴ企業の実業務で本システムを試験活用した事例について分析し、有効性を検証する。</j.0:abstract>
+    <j.1:position>実証</j.1:position>
+    <dc:title>プロジェクト提案のための文書情報管理システムの開発と実証</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-03-04</dc:date>
+    <j.1:after rdf:resource="http://hdl.handle.net/2261/55517"/>
+    <j.1:before rdf:resource="http://hdl.handle.net/2261/52154"/>
+    <j.1:color>red</j.1:color>
+    <j.1:stage>実証段階</j.1:stage>
+    <dc:creator>岡田伊策，齋藤稔，松岡伸治, 笈田佳彰，大和裕幸, 稗方和夫</dc:creator>
+    <dc:description>SIG-KST-2012-03-01</dc:description>
+    <dc:publisher>人工知能学会第2種研究会(SIG-KST)</dc:publisher>
+    <j.0:subject>提案書</j.0:subject>
+    <j.0:subject>プロジェクト</j.0:subject>
+    <j.0:subject>プレゼンテーション</j.0:subject>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>Document Management</j.0:subject>
+    <j.0:subject>Knowlege Management</j.0:subject>
+    <j.0:subject>PowerPoint</j.0:subject>
+    <j.0:subject>Presentation</j.0:subject>
+    <j.0:subject>meta-data</j.0:subject>
+    <j.0:subject>metadata</j.0:subject>
+    <j.0:subject>ナレッジマネジメント</j.0:subject>
+    <j.0:subject>プロジェクト提案</j.0:subject>
+    <j.0:subject>提案書作成</j.0:subject>
+    <j.0:subject>文書管理</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/53452/1/Hiekata_SIG-KST-2012-03-01.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+    <rdfs:label>キーワード</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdfs:label>発表/公開日</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kashiwade.org/2012/09/kd#stage">
+    <rdfs:label>位置づけ</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdfs:label>備考</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ci.nii.ac.jp/naid/110009578432">
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>若杉賢治</j.0:creator>
+    <j.0:abstract>なし</j.0:abstract>
+    <j.1:position>仮説設定</j.1:position>
+    <dc:title>造船と情報システム開発におけるフロントローディング</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-10</dc:date>
+    <j.1:color>blue3</j.1:color>
+    <j.1:stage>仮説設定段階</j.1:stage>
+    <dc:creator>稗方和夫, 大和裕幸, 若杉賢治</dc:creator>
+    <dc:description>Vol.46, pp.28-35</dc:description>
+    <dc:publisher>日本船舶海洋工学会誌</dc:publisher>
+    <dc:source rdf:resource="http://ci.nii.ac.jp/els/110009578432.pdf?id=ART0010030645&amp;type=pdf&amp;lang=jp&amp;host=cinii&amp;order_no=&amp;ppv_type=0&amp;lang_sw=&amp;no=1459901185&amp;cp="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/52612">
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>年次報告書のように同一テーマで複数年に渡って毎年書かれる報告書では、各年の報告書の差分理解が重要であり、そのために報告書全体を確認する必要がある。本研究では、tf-idfの重みづけなどにより各年度の報告書からキーワードを抽出、その変化から各年の差分を自動的に検出して、各報告のトピックをメタデータとして提示するシステムを開発、実際の報告書データに適用してその有効性を示した。また、複合語対応など今後の課題を明確にした。</j.0:abstract>
+    <j.1:position>開発・仮説検証</j.1:position>
+    <dc:title>複数の年次報告書の差分自動検出による各年報告トピックメタデータ提示システムの開発</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-11-16</dc:date>
+    <j.1:color>blue2</j.1:color>
+    <j.1:stage>開発・仮説検証段階</j.1:stage>
+    <dc:creator>岡田伊策，齋藤稔，笈田佳彰, 大和裕幸，稗方和夫</dc:creator>
+    <dc:description>SIG-KST-2012-02-01</dc:description>
+    <dc:publisher>人工知能学会第2種研究会(SIG-KST)</dc:publisher>
+    <j.0:subject>トピック</j.0:subject>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>Jaccard係数</j.0:subject>
+    <j.0:subject>χ二乗</j.0:subject>
+    <j.0:subject>カイ二乗値</j.0:subject>
+    <j.0:subject>差分自動抽出</j.0:subject>
+    <j.0:subject>年次報告書</j.0:subject>
+    <j.0:subject>文書クラスタリング</j.0:subject>
+    <j.0:subject>語の共起</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/52612/1/Hiekata_SIG-KST-2012-02-01.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sciedu.ca/journal/index.php/air/article/view/3159">
+    <j.0:creator>中村覚</j.0:creator>
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>深田直人</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>笈田佳彰</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>Conducting full-text searches on collections of tabular files, in which a single sheet corresponds to a single document and each
+file consists of multiple sheets, typically involves retrieving many candidate files that include the search terms. Opening each
+of these tabular files to determine whether it is the desired sheet is labor-intensive. Searching with high precision thus requires
+expert intuition born of operational experience. Therefore, it would be advantageous to enable the pinpointing of desired
+documents with greater accuracy regardless of the operator’s level of experience.
+In the present study, we propose a method in which operational classifications are assigned as metadata on the basis of the
+table structure of a sheet. We obtain the table structure of the sheet and assign metadata based on a set of rules established
+individually for each pattern in the structure. We propose two methods for representing the table structures obtained: a method
+using node property matrix, and a method in which positional data regarding cells containing specific operation-description data
+are indexed. Comparing the results of searches that use assigned metadata to the results of traditional full-text searches reveals
+that our method has greater search accuracy.
+</j.0:abstract>
+    <j.1:position>開発・仮説検証</j.1:position>
+    <dc:title>Technique for Searching Tabular Form Documents Using Metadata Harvested by Table Structure Analysis</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-01</dc:date>
+    <j.1:before rdf:resource="http://hdl.handle.net/2261/52153"/>
+    <j.1:color>green</j.1:color>
+    <j.1:stage>開発・仮説検証段階</j.1:stage>
+    <dc:creator>Isaac Okada, Minoru Saito, Yoshiaki Oida, Hiroyuki Yamato, Kazuo Hiekata, Satoru Nakamura, Naoto Fukada</dc:creator>
+    <dc:description>Vol.3, No.1, pp.46-51[</dc:description>
+    <dc:publisher>Artificial Intelligence Research</dc:publisher>
+    <j.0:subject>Cosine similarity</j.0:subject>
+    <j.0:subject>Document management</j.0:subject>
+    <j.0:subject>Keyword metadata</j.0:subject>
+    <j.0:subject>Knowledge</j.0:subject>
+    <j.0:subject>Metadata</j.0:subject>
+    <j.0:subject>Operation-description metadata</j.0:subject>
+    <j.0:subject>Table structure analysis</j.0:subject>
+    <j.0:subject>Tabular form document search</j.0:subject>
+    <dc:source rdf:resource="http://www.sciedu.ca/journal/index.php/air/article/viewFile/3159/2348"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/52153">
+    <j.0:creator>三浦慎也</j.0:creator>
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>1シートが1文書に相当し、複数のシートから成る表形式ファイル群を全文検索すると、当該検索語を含んだものが多数抽出される。これら複数の表形式ファイルは都度開かないと、目的文書が確認できない。精度高く検索するには、業務経験による鑑が必要となる。経験に関わらず、より高い精度で目的文書に到達できることが望まれる。本研究では、表構造の接点情報を解析・行列化して雛形文書行列との類似度でメタデータを付与、かつキーワード抽出した情報もメタデータとして複合的に用いて、目的文書をより高い精度で検索できるようにした。</j.0:abstract>
+    <j.1:position>仮説設定</j.1:position>
+    <dc:title>表構造解析とキーワード抽出で付与したメタデータを複合的に用いた表形式文書検索システムの開発</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-25</dc:date>
+    <j.1:after rdf:resource="http://www.sciedu.ca/journal/index.php/air/article/view/3159"/>
+    <j.1:after rdf:resource="http://hdl.handle.net/2261/56103"/>
+    <j.1:color>green</j.1:color>
+    <j.1:stage>仮説設定段階</j.1:stage>
+    <dc:creator>岡田伊策，齋藤稔，稗方和夫，大和裕幸，三浦慎也</dc:creator>
+    <dc:description>SIG-KST-2012-01-02</dc:description>
+    <dc:publisher>人工知能学会第2種研究会(SIG-KST)</dc:publisher>
+    <j.0:subject>knowledge</j.0:subject>
+    <j.0:subject>meta-data</j.0:subject>
+    <j.0:subject>metadata</j.0:subject>
+    <j.0:subject>キーワードメタデータ</j.0:subject>
+    <j.0:subject>コサイン類似度</j.0:subject>
+    <j.0:subject>ナレッジ</j.0:subject>
+    <j.0:subject>文書管理</j.0:subject>
+    <j.0:subject>業務属性メタデータ</j.0:subject>
+    <j.0:subject>表形式文書検索</j.0:subject>
+    <j.0:subject>表構造解析</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/52153/1/Hiekata_SIG-KST-2012-01-02.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hdl.handle.net/2261/55518">
+    <j.0:creator>中村覚</j.0:creator>
+    <j.0:creator>大和裕幸</j.0:creator>
+    <j.0:creator>安藤峻</j.0:creator>
+    <j.0:creator>岡田伊策</j.0:creator>
+    <j.0:creator>稗方和夫</j.0:creator>
+    <j.0:creator>齋藤稔</j.0:creator>
+    <j.0:abstract>情報システム企業では情報システム製品の顧客環境での運用時等に生じたインシデント情報を収集している。本研究は新しいインシデントを効率的に解決するために既存のインシデントレポートの知識を再利用することを目的とする。分類対象に依存したテキスト処理以外の共通部分をプラットホーム化することで横展開可能な文書自動分類プログラムを開発し、複数の文書群に対して適用することで提案プログラムの評価を行った。
+An enterprise involved System Information accumulates knowledge about incidents which occurred under clients’ use as incident reports. This paper aims to reuse knowledge of existing incident reports in order to solve new incidents efficiently and the program to label those reports by use of machine learning is developed. In addition, the platform which handles common processes in analysis such as accumulating resources and saving those metadata is proposed. The programs for specific processes which depend on texts run as plug-ins on this platform. Developed program to label reports in this paper also runs on proposed platform as a plug-in, and the accuracy of the programs is verified by actual incident reports in an enterprise.</j.0:abstract>
+    <j.1:position>開発・仮説検証</j.1:position>
+    <dc:title>インシデントレポートの自動分類とその分析環境の構築と評価</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-06-04</dc:date>
+    <j.1:before rdf:resource="http://hdl.handle.net/2261/53655"/>
+    <j.1:color>blue</j.1:color>
+    <j.1:stage>開発・仮説検証段階</j.1:stage>
+    <dc:creator>稗方和夫, 大和裕幸, 中村覚, 岡田伊策, 齋藤稔, 安藤峻</dc:creator>
+    <dc:description>1E3-3</dc:description>
+    <dc:publisher>2013年度人工知能学会全国大会</dc:publisher>
+    <j.0:subject>メタデータ</j.0:subject>
+    <j.0:subject>インシデントレポート</j.0:subject>
+    <j.0:subject>機械学習</j.0:subject>
+    <j.0:subject>知識再利用</j.0:subject>
+    <j.0:subject>知識獲得</j.0:subject>
+    <j.0:subject>自動分類</j.0:subject>
+    <dc:source rdf:resource="http://repository.dl.itc.u-tokyo.ac.jp/dspace/bitstream/2261/55518/1/Hiekata_JSAI2013_1E3-3.pdf"/>
+  </rdf:Description>
+</rdf:RDF>
